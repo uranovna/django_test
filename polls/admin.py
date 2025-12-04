@@ -3,7 +3,6 @@ from.models import Employees
 from.models import Question, Choice
 
 
-
 class EmployeesAdmin(admin.ModelAdmin):
     list_display =('name', 'age', 'position', 'salary')
     list_filter = ('position',)
@@ -19,3 +18,5 @@ class ChoiceAdmin(admin.ModelAdmin):
 
 admin.site.register(Question)
 admin.site.register(Choice,ChoiceAdmin)
+
+class ChoiceInline(admin.TabularInline): ...
